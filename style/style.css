@@ -1,0 +1,156 @@
+/* 基本样式 */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: gainsboro;
+}
+
+p {
+    text-indent: 2em;
+}
+
+nav {
+    user-select: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #333;
+    color: whitesmoke;
+    padding: 10px 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+nav a {
+    color: whitesmoke;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s; /* 平滑过渡效果 */
+}
+
+nav .right-menu {
+    display: none;
+    cursor: pointer;
+    position: relative;
+}
+
+nav a:hover {
+    background-color: dimgray;
+    color: whitesmoke;
+}
+
+nav .logo {
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.nav-space {
+    height: 4em;
+}
+
+.body {
+    display: flex;
+    justify-content: center;
+}
+
+main {
+    padding: 20px;
+    background-color: whitesmoke;
+    margin: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* animation: slideInUp 0.8s ease-in forwards; */
+    width: 50em;
+}
+aside {
+    padding: 20px;
+    background-color: whitesmoke;
+    margin: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* animation: slideInUp 0.8s ease-in forwards; */
+    width: 20em;
+}
+@media screen and (max-width: 768px) {
+    aside {
+        display: none;
+    }
+    nav .right {
+        display: none;
+    }
+    nav .right-menu {
+        display: block;
+    }
+    nav .right-menu ul {
+        border-radius: 5px;
+        position: absolute;
+        display: none;
+        list-style: none;
+        background-color: #444;
+        margin: 0;
+        padding: 1em 1em 1em 1em;
+        width: max-content;
+    }
+    nav .right-menu a {
+        display: block;
+    }
+}
+
+.member-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.member-list li {
+    color: whitesmoke;
+    padding: 20px;
+    background-color: #222;
+    margin: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+}
+.member-list img {
+    width: 10em;
+    height: 10em;
+    margin: 0 1em 0 0;
+    border-radius: 50%;
+    background-color: darkgray;
+}
+.member-list h1 {
+    font-size: 1.5em;
+}
+.member-list h1 span {
+    padding-left: 0.25em;
+    font-size: 0.75em;
+    font-weight: lighter;
+}
+.member-list p {
+    text-indent: 1em;
+}
+/* 从下往上渐显入场动画 */
+@keyframes slideInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0); /* 滑动到初始位置 */
+    }
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    /* position: fixed; */
+    /* bottom: 0; */
+    width: 100%;
+}
